@@ -1,0 +1,19 @@
+$primary-color: #002244;
+$secondary-color: #532332;
+
+body{
+  color: $primary-color;
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../src/assets/fonts/Inter/Inter-VariableFont_opsz_wght.ttf') format('truetype'),
+       url('../src/assets/fonts/Inter/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('../src/assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype'),
+       url('../src/assets/fonts/EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+}
