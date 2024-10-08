@@ -1,10 +1,14 @@
-import Section from '../Section/index.js';
+import { Outlet } from 'react-router-dom';
+import Navbar from '../Navbar/index.js';
+import Footer from '../Footer/index.js';
 import './index.scss';
 
 const Layout = () => {
   return (
     <>
-      <Section />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
 }
