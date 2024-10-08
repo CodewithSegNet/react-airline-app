@@ -1,0 +1,150 @@
+@import '../../App.scss';
+ 
+  
+  .card-image {
+    max-width: 100% !important;
+    height: 300px !important;
+  }
+
+.call-btn{
+    padding: 10px 67px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: $secondary-color;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: #fff !important;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+}
+
+  .custom-slider-container .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 410px;
+}
+
+
+.slick-next:before {
+    content: '→';
+    color: $secondary-color;
+}
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .8;
+}
+
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 30px;
+    opacity: .75;
+}
+
+
+.slick-dots {
+    bottom: -45px;
+}
+
+
+.slick-prev:before {
+    content: '←';
+    color: $secondary-color;
+}
+
+
+
+
+// Extra Devices / extra screen (max-width: 1200px)
+@media (max-width: 1290px) {
+    .custom-slider-container .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 410px !important;
+    }
+ 
+  
+  }
+  
+  
+  // Large Devices / Desktops (max-width: 992px)
+  @media (max-width: 992px) {
+    .card-image {
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+
+      .custom-slider-container .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 410px;
+    }
+    
+  
+  }
+  
+  // Medium Devices / Tablets (max-width: 767px)
+  @media (max-width: 769px) {
+    .card-image {
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+
+      .custom-slider-container .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 348px !important;
+    }
+    
+  
+  }
+  
+  
+  
+  
+  // Small Devices / Mobile (max-width: 480px)
+  @media (max-width: 480px) {
+   
+    .card-image {
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+
+      .custom-slider-container .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 269px !important;
+    }
+    
+  }
+  
+  
+  // Small Devices / Mobile (max-width: 480px)
+  @media (max-width: 428px) {
+    .card-image {
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+
+      .custom-slider-container .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 269px !important;
+    }
+    
+  }

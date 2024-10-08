@@ -5,10 +5,62 @@ nav .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .88rem 2rem;
+    padding: .5rem 2rem;
     background: transparent !important;
-    position: absolute;
+    position: absolute !important;
+    top: 0;
+    z-index: 999999;
+    transition: background-color 0.3s ease;
 }
+
+.fixed-top{
+    position: fixed !important;
+}
+
+
+.navbar-toggler {
+    background-color: #fff;
+    border: none; 
+    
+    &.navbar-toggler-open {
+      color: #fff;
+    }
+  }
+ 
+
+
+.navbar-scrolled {
+    background-color: $primary-color !important;
+    box-shadow: 0 0 0 0.4px rgb(0, 0, 0, 0.5);
+    opacity: .9;
+    
+    .nav-link {
+      color: #fff !important;
+      
+      &:hover {
+        color: $secondary-color !important; 
+    }
+  }
+}
+
+
+.navbar-collapse {
+    transition: all 200ms linear;
+}
+  
+  .navbar-open {
+    background-color: $primary-color !important;
+    
+    .nav-link {
+      color: #fff !important;
+      
+      &:hover {
+        color: $secondary-color !important;
+      }
+    }
+  }
+
+
 
 .mobile-logo{
     display: none;
@@ -39,7 +91,11 @@ width: 50%;
 }
 
 .logo{
-    width: 14%;
+    width: 11%;
+}
+
+.logo--iata{
+    width: 9%;
 }
 
 .dala-logo{
@@ -82,6 +138,14 @@ ul{
     ul{
         width: 50%;
       }
+
+      .logo{
+        width: 14%;
+    }
+
+    .logo--iata{
+        width: 11%;
+    }
 }
 
 
@@ -93,8 +157,21 @@ ul{
     }
 
     .logo{
-        width: 25%;
+        width: 23%;
     }
+
+    .navbar-brand{
+        display: none;
+    }
+
+    ul.navbar-nav.mb-2.mb-lg-0 {
+    margin: 0 auto;
+}
+
+nav.navbar{
+    padding: 1rem .4rem;
+}
+
 }
 
 // Medium Devices / Tablets (max-width: 767px)
@@ -108,7 +185,7 @@ ul{
 // Small Devices / Mobile (max-width: 480px)
 @media (max-width: 480px) {
     .logo{
-        width: 40%;
+        width: 50%;
         cursor: pointer;
     }
 

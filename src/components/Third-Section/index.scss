@@ -1,0 +1,86 @@
+@import '../../App.scss';
+  
+  .third--content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .svg{
+    color: $primary-color;
+  }
+  
+  .third--content div {
+    flex: 1;
+  }
+
+  .third--title{
+    margin-bottom: 3.5rem;
+
+    h2{
+      text-align: right;
+    }
+  }
+  
+  // h1 {
+  //   font-size: 2.5rem;
+  //   line-height: 1.2;
+  // }
+  
+  // p {
+  //   font-size: 1rem;
+  //   line-height: 1.5;
+  // }
+  
+  .svg--img img {
+    width: 100%;
+    max-width: 1000px; 
+    min-width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  
+// Large Devices / Desktops (max-width: 992px)
+@media (max-width: 992px) {
+  .third--content {
+    flex-direction: column-reverse;
+    .svg--img {
+      order: 1; 
+    }
+  }
+
+ .third--title {
+  margin-bottom: 2rem;
+}
+
+}
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .third--content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+
+    .third--title {
+      margin-bottom: 2rem;
+    }
+
+    .svg--img img {
+      max-width: 100%;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
