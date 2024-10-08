@@ -13,3 +13,34 @@ font-size: 1.5rem;
 font-weight: 900;
 color: $primary-color;
 }
+
+
+
+
+
+// Extra Devices / extra screen (max-width: 1200px)
+@media (max-width: 1290px) {
+
+}
+
+
+
+// Large Devices / Desktops (max-width: 992px)
+@media (max-width: 992px) {
+
+
+}
+
+// Medium Devices / Tablets (max-width: 767px)
+@media (max-width: 769px) {
+
+}
+
+// Small Devices / Mobile (max-width: 480px)
+@media (max-width: 480px) {
+    .partner-title {
+        h1{
+            font-size: 1.8rem !important;
+        }
+    }
+}
