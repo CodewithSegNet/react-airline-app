@@ -55,8 +55,12 @@ const Navbar = () => {
              aria-expanded={isNavbarOpen ? 'true' : 'false'}
              aria-label="Toggle navigation"
              onClick={toggleNavbar}
-             style={{ border: scrolled ? '1px solid #fff' : '' }}
-           >
+             style={{
+              backgroundColor: 'transparent',  
+              color: '#002244',           
+              border: '2px solid #002244',
+            }}           
+            >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className={`collapse navbar-collapse desktop-nav ${isNavbarOpen ? 'show' : ''}`} id="navbarTogglerDemo03">
