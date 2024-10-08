@@ -59,6 +59,10 @@
   .book-button svg {
     margin-left: 5px;
   }
+
+  .break{
+    display: block;
+  }
   
   // .book-button:hover {
   //   background-color: #0056b3;
@@ -84,19 +88,29 @@
   .second--content{
     h1{
       margin-bottom: 3rem;
+      font-size: 3rem;
+      span{
+        padding-right: .5rem;
+      }
     }
   }
-  
 }
+  
 
   // Large Devices / Desktops (max-width: 992px)
   @media (max-width: 992px) {
 .second--content{
   h1{
-    margin-bottom: 3rem;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    span{
+      padding-right: .5rem;
+    }
   }
 }
-  
+.break{
+  display: block;
+}
   }
 
   @media (max-width: 768px) {
@@ -104,8 +118,18 @@
 
     .second--content{
       h1{
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+        font-size: 2rem;
+
+
+        span{
+          padding-right: .5rem;
+        }
       }
+     
+    }
+    .break{
+      display: block;
     }
   }
   
@@ -115,9 +139,16 @@
       max-height: 202px;
     }
 
+    .break{
+      display: none;
+    }
+
     .second--content{
       h1{
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+span{
+  padding-right: .3rem;
+}
       }
     }
   }

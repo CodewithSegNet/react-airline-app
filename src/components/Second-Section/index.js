@@ -76,7 +76,7 @@ const SecondSection = () => {
     <section className="container bottom--padding">
       <div className="second--content">
         <h1>
-          Explore Our <span>Exclusive Travel</span> Packages
+          Explore Our <span>Exclusive Travel     </span>   <br className="break"/>    Packages
         </h1>
         <div className="card-carousel">
           <Card slides={CardData} settings={settings} />
