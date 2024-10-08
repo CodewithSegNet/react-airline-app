@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_NAME = 'my-cache-v1';
+const CACHE_NAME = 'my-cache-v2';
 
 // List all the static assets to cache
 const urlsToCache = [

@@ -65,7 +65,7 @@ const Navbar = () => {
                 <img className="iata-logo logo2" src={logo} alt="logo" />
               </Link>
             </div>
-            <ul className="navbar-nav mb-2 mb-lg-0">
+            <ul className="navbar-nav mb-lg-0">
               <li className="nav-item">
                 <NavLink
                   exact="true"

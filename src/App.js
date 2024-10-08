@@ -2,7 +2,7 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
 import Home from './components/Homepage';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 
@@ -20,6 +20,6 @@ function App() {
 }
 
 
-serviceWorkerRegistration.register();
+// serviceWorkerRegistration.register();
 
 export default App;

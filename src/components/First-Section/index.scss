@@ -19,15 +19,14 @@ main.first-content {
 .fix-whatsapp-icon {
   font-size: 40px; 
   color: #25D366;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  height: 4rem;
-  max-width: 100%;
-  width: 100%;
+  height: 3rem;
+  width: 48px !important;
 }
 
 .fix-whatsapp-icon:hover {
@@ -223,6 +222,19 @@ span {
     max-width: 70%;
   }
 
+  .fix-whatsapp-icon {
+    font-size: 40px; 
+    color: #25D366;
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 4rem;
+    width: 68px;
+  }
+
 }
 
 
@@ -232,6 +244,10 @@ span {
     padding: 0 1rem;
   }
 
+  .awards {
+    padding: 1.5rem 0;
+}
+
 
   .container .hero--text {
     font-size: 2.5rem;
@@ -240,7 +256,6 @@ span {
   
   .award--logo-container {
     flex-direction: column;
-    padding: 2rem 0;
 }
 
 
@@ -270,10 +285,23 @@ span {
 
   }
 
+  .fix-whatsapp-icon {
+    font-size: 40px; 
+    color: #25D366;
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 4rem;
+    width: 68px;
+  }
+
   .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     z-index: 1000;
   }
 
@@ -287,13 +315,12 @@ span {
 
   
   main.first-content {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
 
 .award--logo-container {
   flex-direction: column;
-  padding: 2rem 0;
 }
 
   .container .hero--text {
@@ -336,14 +363,27 @@ span {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: .8rem 0;
+    padding: 1.5rem 0;
   }
 
 
+  .fix-whatsapp-icon {
+    font-size: 40px; 
+    color: #25D366;
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 4rem;
+    width: 68px;
+  }
+
   .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     z-index: 1000;
   }
 
@@ -354,6 +394,11 @@ span {
 
 // Small Devices / Mobile (max-width: 480px)
 @media (max-width: 480px) {
+  .awards {
+    padding: 1.5rem 0;
+}
+
+
   .container .carousel-caption {
     width: 90%;
   }
@@ -364,7 +409,7 @@ span {
   }
 
   main.first-content {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
 
@@ -403,13 +448,27 @@ span {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: .8rem 0;
+    padding: 1.5rem 0;
+  }
+
+
+  .fix-whatsapp-icon {
+    font-size: 40px; 
+    color: #25D366;
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 4rem;
+    width: 68px;
   }
 
   .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
   }
 
@@ -452,10 +511,24 @@ span {
   }
 
 
+  .fix-whatsapp-icon {
+    font-size: 40px; 
+    color: #25D366;
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 4rem;
+    width: 68px;
+  }
+
+
   .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     z-index: 1000;
   }
 }
