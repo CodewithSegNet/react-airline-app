@@ -149,7 +149,7 @@ const FourthSection = () => {
 
   return (
     <div className="slider-container">
-      <div className="partner-title">
+      <div className="container partner-title">
         <p className="partners">Our Partners</p>
         <h1>
           We Work With The <span> Best Partners </span>
