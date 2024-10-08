@@ -82,7 +82,7 @@
   @media (max-width: 992px) {
     .card-image {
         max-width: 100% !important;
-        height: 358px !important;
+        height: 300px !important;
       }
 
       .custom-slider-container .slick-slide {
@@ -118,9 +118,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 469px !important;
+        height: 400px !important;
     }
     
+
+    
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  opacity: .75;
+}
   }
   
   
@@ -132,7 +139,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 529px !important;
+        height: 350px !important;
     }
+
+    
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  opacity: .75;
+}
     
   }
