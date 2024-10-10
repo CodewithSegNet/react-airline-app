@@ -1,0 +1,286 @@
+@import '../../App.scss';
+
+
+.second-content {
+    .carousel {
+      height: 36vh;
+  
+      .carousel-inner {
+        height: 100%;
+  
+        .carousel-item {
+          height: 100%;
+          object-position: 0 70% !important;
+  
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            animation: zoom 15s linear infinite;
+            object-position: 0 70% !important;
+          }
+        }
+      }
+    }
+
+    .carousel-item img {
+      width: 100%;
+      // height: 100vh !important;
+      object-fit: cover;
+      object-position: 0 70% !important;
+    }
+
+  
+  }
+
+  
+ .second--carousel .carousel-caption {
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 73%;
+    max-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $primary-color;
+  } 
+
+
+  
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+
+h5{
+  letter-spacing: 1px;
+ }
+
+
+.service--text{
+  font-weight: 900;
+  .backlink{
+    text-decoration: none;
+    color: $secondary-color;
+    transition: all 200ms ease;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+
+
+.visa-service{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
+.visa-service-parag{
+  width: 50%;
+  font-size: .9rem;
+  color: $primary-color;
+}
+
+
+.countries{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.countries-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sections-bottom-pad{
+  margin-bottom: 60px;
+}
+
+.countries-block{
+  padding: 2rem;
+  max-height: 230px;
+  width: 232px;
+  text-align: center;
+}
+
+.countries-name{
+  color: $primary-color;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 15px;
+}
+
+
+
+.countries-img{
+  height: 100px;
+  max-width: 100px;
+  border-radius: 360px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.block-alt{
+  background-color: #f0f0f0;
+}
+
+
+
+.inbound-destination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.inbound-container-block{
+  position: relative; 
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  transition: all 250ms ease-in-out;
+  img{
+    height: 220px;
+    width: 320px;
+    border-radius: 20px;
+  }
+
+  &:hover{
+    transform: scale(1.04);
+    color: $secondary-color;
+  }
+
+   &::after {
+    content: ""; 
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      rgba(0, 34, 68, 0.6), 
+      rgba(83, 35, 50, 0.6) 
+    );
+    z-index: 1; 
+  }
+}
+
+
+
+.inbound-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+
+}
+
+
+.inbound-text{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 900;
+  z-index: 99999;
+  color: #f0f0f0;
+}
+
+
+
+.outbound-container-block{
+  position: relative; 
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  transition: all 250ms ease-in-out;
+  img{
+    height: 180px;
+    width: 280px;
+    border-radius: 20px;
+  }
+
+  &:hover{
+    transform: scale(1.04);
+  }
+}
+
+
+.service-carousel{
+  height: 654px;
+}
+
+
+
+// Extra Devices / extra screen (max-width: 1200px)
+@media (max-width: 1290px) {
+
+
+}
+
+
+// Large Devices / Desktops (max-width: 992px)
+@media (max-width: 992px) {
+
+  .visa-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .visa-service-parag{
+    width: 70%;
+    font-size: .9rem;
+    color: $primary-color;
+  }
+  
+  
+}
+
+// Medium Devices / Tablets (max-width: 767px)
+@media (max-width: 769px) {
+
+  .service-carousel{
+    height: 596px;
+  }
+
+}
+
+
+
+
+// Small Devices / Mobile (max-width: 480px)
+@media (max-width: 480px) {
+  .service-carousel{
+    height: 456px;
+  }
+
+}
+
+
+// Small Devices / Mobile (max-width: 480px)
+@media (max-width: 428px) {
+
+}

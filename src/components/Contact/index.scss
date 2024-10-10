@@ -1,0 +1,74 @@
+@import '../../App.scss';
+
+
+.second-content {
+    .carousel {
+      height: 36vh;
+  
+      .carousel-inner {
+        height: 100%;
+  
+        .carousel-item {
+          height: 100%;
+  
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            animation: zoom 15s linear infinite;
+          }
+        }
+      }
+    }
+
+    .carousel-item img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+  
+  }
+
+
+  .separator {
+    margin: 0 5px;
+  }
+  
+  
+ .second--carousel .carousel-caption {
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 73%;
+    max-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $primary-color;
+  } 
+
+
+  
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+
+.service--text{
+  font-weight: 900;
+  .backlink{
+    text-decoration: none;
+    color: $secondary-color;
+    transition: all 200ms ease;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+}

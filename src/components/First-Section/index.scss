@@ -9,6 +9,12 @@ main.first-content {
   padding: 0 1rem;
 }
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: $secondary-color;
+}
+
+
+
 .whatsapp-fixed {
   position: fixed;
   bottom: 20px;
@@ -107,7 +113,7 @@ main.first-content {
   transition: 200ms ease-in-out;
 }
 
-.container .carousel-caption {
+.page-container .carousel-caption {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -190,7 +196,7 @@ span {
 // Extra Devices / extra screen (max-width: 1200px)
 @media (max-width: 1290px) {
 
-  .container .carousel-caption {
+  .page-container .carousel-caption {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -272,7 +278,7 @@ span {
   }
 
 
-  .container .carousel-caption {
+  .page-container .carousel-caption {
     width: 70%;
   }
 
@@ -309,7 +315,7 @@ span {
 
 // Medium Devices / Tablets (max-width: 767px)
 @media (max-width: 769px) {
-  .container .carousel-caption {
+  .page-container .carousel-caption {
     width: 77%;
   }
 
@@ -399,7 +405,7 @@ span {
 }
 
 
-  .container .carousel-caption {
+  .page-container .carousel-caption {
     width: 90%;
   }
 
@@ -475,7 +481,7 @@ span {
   
 
   .carousel-item img {
-    object-position:  center right; 
+    object-position:  77% 50% !important; 
   }
 
 }
@@ -487,7 +493,7 @@ span {
     padding-bottom: 60px;
   }
 
-  .container .carousel-caption {
+  .page-container .carousel-caption {
     width: 90%;
   }
 
@@ -540,6 +546,6 @@ span {
 
 
   .carousel-item img {
-    object-position:  center right; 
+    object-position:  77% 50% !important; 
   }
 }
