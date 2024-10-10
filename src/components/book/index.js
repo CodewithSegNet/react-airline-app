@@ -10,8 +10,8 @@ const Book = () => {
        <div className="">
         <div className="book--content container">
         <h3>
-          Don't Settle For anything Less Than The Best
-          And Let Us Help Plan Your Next Great Escape.
+          Don't Settle For anything Less Than The Best, 
+          Let Us Help Plan Your Next Great Escape.
         </h3>
         <button type="button" className='button'>
         <a className='book-btn' href="tel:+2348027373385">Book Now <CgArrowRight /></a>

@@ -10,7 +10,6 @@ const urlsToCache = [
   '/logo192.png',
   '/static/js/bundle.js',
   '/static/css/main.css',
-  // Cache any fonts and images
   '/assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf',
   '/assets/fonts/Inter/Inter-VariableFont_opsz_wght.ttf',
   '/assets/images/logo.png',
