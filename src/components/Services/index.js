@@ -279,9 +279,11 @@ const Services = () => {
               </h2>
             </div>
             <p className="visa-service-parag">
-              If Life is a journey then your vacation are special destinations at
-              Dala Air Services Ltd. We hope to partner with you through this
-              journey by bringing you many exotic vacations.
+              At Dala Air Services Ltd we provides reliable visa services to help 
+              you navigate the complexities of international travel. 
+              Whether you're planning a short getaway or a long-term stay, 
+              our expert team offers guidance on visa requirements, application processes, 
+              and necessary documentation for a variety of countries.
             </p>
           </div>
 
