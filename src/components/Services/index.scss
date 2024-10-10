@@ -277,6 +277,21 @@ h5{
     height: 456px;
   }
 
+
+  .visa-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .visa-service-parag{
+    width: 95%;
+    font-size: .9rem;
+    color: $primary-color;
+  }
+  
 }
 
 
