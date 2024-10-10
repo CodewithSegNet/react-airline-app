@@ -86,7 +86,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   exact="true"
-                  to="/Service"
+                  to="/Services"
                   className="nav-link"
                   alt="Services"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
@@ -97,7 +97,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   exact="true"
-                  to="/About Us"
+                  to="/About-Us"
                   className="nav-link"
                   alt="About Us"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
@@ -108,9 +108,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   exact="true"
-                  to="/Contact Us"
+                  to="/Contact-Us"
                   className="nav-link"
-                  alt="Contact Us"
+                  alt="ContactUs"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
                 >
                   Contact Us

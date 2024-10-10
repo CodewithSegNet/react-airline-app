@@ -35,7 +35,7 @@ const Section = () => {
               className="d-block w-100"
               loading="lazy"
             />
-            <div className="container">
+            <div className="container page-container">
               <div className="carousel-caption">
                 <h1 className='hero--text'>
                   Turn your adventure dreams into reality with <span>Dala Air</span>

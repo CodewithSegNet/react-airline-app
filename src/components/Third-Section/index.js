@@ -19,11 +19,6 @@ const ThirdSection = () => {
           Let’s Go <span> Travel Around</span> <br /> The World
         </h2>
             </div>
-          {/* <p>
-            If Life is a journey then your vacation are special destinations at
-            Dala Air Services Ltd. We hope to partner with you through this
-            journey by bringing you many exotic vacations.
-          </p> */}
           <p>
             We offer an array of exotic vacations at Dala Air Services Ltd, from Hajj and
             Umrah trips to beachside and hillside retreats, jungle vacations,

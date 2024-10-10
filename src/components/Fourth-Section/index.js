@@ -161,6 +161,9 @@ const FourthSection = () => {
         <Carousel slides={carouselData1} settings={sliderSettings1} />
         <Carousel slides={carouselData2} settings={sliderSettings2} />
       </div>
+
+
+    
     </div>
   );
 };

@@ -30,9 +30,11 @@ const Footer = () => {
                     </div>
 
                     <p className='footer--text text2'>
-                        #48, Ibrahim Taiwo Road, Kano State, Nigeria
-                        Abuja Office suit 205 GCL Plaza Plot ELOT 522.
-                        Amino Kano Crescent/WUSE 2 FCT
+                        #48, Ibrahim Taiwo Road, Kano State, Nigeria.
+                        <br/>
+                        Amino Kano Crescent, suit 205 GCL Plaza Plot ELOT 522.
+                        Abuja Office. 
+
                     </p>
 
                     <div>
