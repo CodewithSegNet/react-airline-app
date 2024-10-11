@@ -18,6 +18,16 @@ const Home = () => {
       <div className='section'>
       <SecondSection />
       </div>
+      <section className="text--block section">
+<div className="design-text section">
+<h1>
+We Pride Ourselves On Being A One-Stop Shop For All Your Travel 
+Needs, And We Look Forward To The Opportunity To Serve You.
+</h1>
+
+</div>
+      </section>
+
       <div className='section'>
       <ThirdSection />
       </div>

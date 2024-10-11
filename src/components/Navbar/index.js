@@ -19,8 +19,31 @@ const Navbar = () => {
     }
   };
 
+  // const toggleNavbar = () => {
+  //   setIsNavbarOpen(!isNavbarOpen);
+  // };
+
   const toggleNavbar = () => {
-    setIsNavbarOpen(!isNavbarOpen);
+    const navbar = document.querySelector('.navbar-collapse');
+
+    if (isNavbarOpen) {
+      // Add close class before collapsing
+      navbar.classList.remove('show');
+      navbar.classList.add('close');
+      
+      setTimeout(() => {
+        setIsNavbarOpen(false);
+      }, 500); // Match the transition duration
+    } else {
+      // Open the navbar
+      navbar.classList.remove('close');
+      setIsNavbarOpen(true);
+    }
+  };
+
+  const closeNavbar = () => {
+    setIsNavbarOpen(false);
+    
   };
 
   useEffect(() => {
@@ -63,7 +86,9 @@ const Navbar = () => {
             >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={`collapse navbar-collapse desktop-nav ${isNavbarOpen ? 'show' : ''}`} id="navbarTogglerDemo03">
+          <div className={`collapse navbar-collapse desktop-nav ${isNavbarOpen ? 'show' : ''}`} id="navbarTogglerDemo03"
+          >
+            
             <div className="navbar-brand logo">
               <Link className="" to="/">
                 <img className="iata-logo logo2" src={logo} alt="logo" />
@@ -79,6 +104,7 @@ const Navbar = () => {
                   aria-current="page"
                   alt="Home"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
+                  onClick={closeNavbar}
                 >
                   Home
                 </NavLink>
@@ -90,6 +116,7 @@ const Navbar = () => {
                   className="nav-link"
                   alt="Services"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
+                  onClick={closeNavbar}
                 >
                   Services
                 </NavLink>
@@ -101,6 +128,7 @@ const Navbar = () => {
                   className="nav-link"
                   alt="About Us"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
+                  onClick={closeNavbar}
                 >
                   About Us
                 </NavLink>
@@ -112,6 +140,7 @@ const Navbar = () => {
                   className="nav-link"
                   alt="ContactUs"
                   style={{ color: (isNavbarOpen ? '#fff' : scrolled ? '#fff' : '') }}
+                  onClick={closeNavbar}
                 >
                   Contact Us
                 </NavLink>

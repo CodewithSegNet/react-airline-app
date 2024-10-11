@@ -16,7 +16,7 @@ const Section = () => {
     <main className="first-content" alt='hero content'>
       <section aria-label="Hero Section">
       <div className='icon whatsapp-fixed'>
-        <a href="https://wa.me/+2348027373385" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className='fix-whatsapp-icon' />
         </a>
       </div>
@@ -45,7 +45,7 @@ const Section = () => {
                   world’s most exciting destinations
                 </p>
                 <button type="button" className='button'>
-                  <a className='btn' href="tel:+2348027373385">Book Now <CgArrowRight /></a>
+                  <a className='btn' href="tel:+2348023185363">Book Now <CgArrowRight /></a>
                 </button>
               </div>
             </div>

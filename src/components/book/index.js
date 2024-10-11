@@ -14,7 +14,7 @@ const Book = () => {
           Let Us Help Plan Your Next Great Escape.
         </h3>
         <button type="button" className='button'>
-        <a className='book-btn' href="tel:+2348027373385">Book Now <CgArrowRight /></a>
+        <a className='book-btn' href="tel:+2348023185363">Book Now <CgArrowRight /></a>
         </button>
         </div>
        

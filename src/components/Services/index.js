@@ -236,7 +236,7 @@ const Services = () => {
 
       <section className='sections-bottom-pad'>
         <div className='icon whatsapp-fixed'>
-          <a href="https://wa.me/+2348027373385" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp className='fix-whatsapp-icon' />
           </a>
         </div>
@@ -339,6 +339,18 @@ const Services = () => {
 
       </section>
 
+
+
+
+      <section className="text--block section">
+<div className="design-text section">
+<h1>
+We Pride Ourselves On Being A One-Stop Shop For All Your Travel 
+Needs, And We Look Forward To The Opportunity To Serve You.
+</h1>
+
+</div>
+      </section>
 
 
 
