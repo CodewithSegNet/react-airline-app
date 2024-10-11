@@ -71,7 +71,7 @@ const ThirdSection = () => {
           variants={{
             visible: { opacity: 1, x: 0 },
           }}
-          transition={{ duration: 0.8, delay: 3 }}
+          transition={{ duration: 0.8, delay: 2.1 }}
 
         >
           <div>
@@ -105,7 +105,7 @@ const ThirdSection = () => {
             variants={{
               visible: { opacity: 1, x: 0 },
             }}
-            transition={{ duration: 0.9, delay: 3.5 }}
+            transition={{ duration: 0.9, delay: 2.5 }}
 
             src={svg2} alt='travel illustration' />
         </div>

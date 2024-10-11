@@ -48,6 +48,12 @@ import outbound7 from '../../assets/images/Nepal-removebg-preview.png'
 import outbound8 from '../../assets/images/Stickers-removebg-preview.png'
 import outbound9 from '../../assets/images/VietnamSticker-removebg-preview.png'
 import outbound10 from '../../assets/images/Dubai-removebg-preview.png'
+import {  CgArrowUp } from 'react-icons/cg'
+import React, { useEffect, useRef } from "react"
+import { motion, useInView, useAnimation } from "framer-motion"
+import { useLocation } from 'react-router-dom';
+
+
 
 
 
@@ -77,6 +83,29 @@ const CardData = [
 
 
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+  
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
+
+  const ScrollTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -228,11 +257,18 @@ const Services = () => {
     { src: outbound10, alt: 'Destination 13'}
   ];
 
+
+  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <main className="second-content">
       <Helmet>
         <title>Services - Dala Air Services</title>
       </Helmet>
+      <ScrollTop />
 
       <section className='sections-bottom-pad'>
         <div className='icon whatsapp-fixed'>
@@ -271,25 +307,53 @@ const Services = () => {
 
       <section className="section">
 
-        <div className="container">
+        <div className="container" ref={ref}>
           <div className="visa-service">
             <div className="visa-service-title">
-              <h2>
+              <motion.h2
+              
+              initial={{ opacity: 0, x: -50 }}
+              animate={mainControls}
+              variants={{
+                visible: { opacity: 1, x: 0 }, 
+              }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+
+              >
                 Country Of <span> Visa Services</span>
-              </h2>
+              </motion.h2>
             </div>
-            <p className="visa-service-parag">
+            <motion.p
+            
+            initial={{ opacity: 0, x: 50 }}
+            animate={mainControls}
+            variants={{
+              visible: { opacity: 1, x: 0 }, 
+            }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            
+            className="visa-service-parag">
               At Dala Air Services Ltd we provides reliable visa services to help 
               you navigate the complexities of international travel. 
               Whether you're planning a short getaway or a long-term stay, 
               our expert team offers guidance on visa requirements, application processes, 
               and necessary documentation for a variety of countries.
-            </p>
+            </motion.p>
           </div>
 
 
           <div className='countries'>
-            <div className='countries-container'>
+            <motion.div 
+            
+            
+            initial={{ opacity: 0, y: 50 }}
+            animate={mainControls}
+            variants={{
+              visible: { opacity: 1, y: 0 }, 
+            }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            
+            className='countries-container'>
               {countries.map((country, index) => (
                 <div className={country.className} key={index}>
                   <div className='countries-block-img'>
@@ -300,7 +364,7 @@ const Services = () => {
                   </p>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -310,29 +374,56 @@ const Services = () => {
         <div className="container">
           <div className="visa-service">
             <div className="visa-service-title">
-              <h2>
+              <motion.h2
+              
+              initial={{ opacity: 0, x: -50 }}
+              animate={mainControls}
+              variants={{
+                visible: { opacity: 1, x: 0 }, 
+              }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              
+              >
                 <span>Inbound </span> Destinations
-              </h2>
+              </motion.h2>
             </div>
-            <p className="visa-service-parag">
+            <motion.p 
+            
+            initial={{ opacity: 0, x: 50 }}
+            animate={mainControls}
+            variants={{
+              visible: { opacity: 1, x: 0 }, 
+            }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+
+            className="visa-service-parag">
               Our inbound destination services provide travelers 
               with a seamless and memorable experience. 
               From reliable airport transfers to guided tours, 
               we ensure every aspect of your journey is smooth, 
               secure, and designed to meet your needs.
-            </p>
+            </motion.p>
           </div>
 
 
           <div className='inbound-destination'>
-      <div className='inbound-container'>
+      <motion.div
+      
+      initial={{ opacity: 0, y: 50 }}
+      animate={mainControls}
+      variants={{
+        visible: { opacity: 1, y: 0 }, 
+      }}
+      transition={{ duration: 0.5, delay: 0.9 }}
+      
+      className='inbound-container'>
         {inboundDestinations.map((destination, index) => (
           <div className='inbound-container-block' key={index}>
             <img src={destination.src} className='inbound-img' alt={destination.alt} loading="lazy"  />
             <p className='inbound-text'>{destination.text}</p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
 
         </div>
@@ -344,10 +435,20 @@ const Services = () => {
 
       <section className="text--block section">
 <div className="design-text section">
-<h1>
+<motion.h1
+
+
+initial={{ opacity: 0, y: 50 }}
+animate={mainControls}
+variants={{
+  visible: { opacity: 1, y: 0 }, 
+}}
+transition={{ duration: 0.8, delay: 0.5 }}
+
+>
 We Pride Ourselves On Being A One-Stop Shop For All Your Travel 
 Needs, And We Look Forward To The Opportunity To Serve You.
-</h1>
+</motion.h1>
 
 </div>
       </section>
@@ -359,26 +460,53 @@ Needs, And We Look Forward To The Opportunity To Serve You.
         <div className="container">
           <div className="visa-service">
             <div className="visa-service-title">
-              <h2>
+              <motion.h2
+              
+              initial={{ opacity: 0, x: -50 }}
+              animate={mainControls}
+              variants={{
+                visible: { opacity: 1, x: 0 }, 
+              }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              
+              >
                 <span>Outbound </span> Destinations
-              </h2>
+              </motion.h2>
             </div>
-            <p className="visa-service-parag">
+            <motion.p
+            
+            initial={{ opacity: 0, x: 50 }}
+            animate={mainControls}
+            variants={{
+              visible: { opacity: 1, x: 0 }, 
+            }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+
+            className="visa-service-parag">
             Our outbound destination services take you across the globe with ease and comfort. 
             Whether you're planning a vacation, business trip, or cultural exploration, 
             we offer comprehensive travel solutions to popular international destinations.
-            </p>
+            </motion.p>
           </div>
 
 
           <div className='inbound-destination'>
-      <div className='inbound-container'>
+      <motion.div
+      
+      initial={{ opacity: 0, y: 50 }}
+      animate={mainControls}
+      variants={{
+        visible: { opacity: 1, y: 0 }, 
+      }}
+      transition={{ duration: 0.5, delay: 0.9 }}
+      
+      className='inbound-container'>
         {outboundDestinations.map((destination, index) => (
           <div className='outbound-container-block' key={index}>
             <img src={destination.src} className='inbound-img' alt={destination.alt} loading="lazy"  />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
 
         </div>
@@ -389,7 +517,16 @@ Needs, And We Look Forward To The Opportunity To Serve You.
 
 
       <section className="section">
-        <div className="second--content service-carousel">
+        <motion.div
+        
+        initial={{ opacity: 0, y: 50 }}
+        animate={mainControls}
+        variants={{
+          visible: { opacity: 1, y: 0 }, 
+        }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        
+        className="second--content service-carousel">
           <div className='container'>
             <h1>
               Explore Our <span>Exclusive Travel     </span>   <br className="break" />    Packages
@@ -398,10 +535,14 @@ Needs, And We Look Forward To The Opportunity To Serve You.
               <Card slides={CardData} settings={settings} />
             </div>
           </div>
-        </div>
+        </motion.div>
 
 
       </section>
+
+      <button className="scroll-to-top" onClick={scrollToTop}>
+        <CgArrowUp />
+      </button>
 
     </main>
   )

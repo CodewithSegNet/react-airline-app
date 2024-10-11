@@ -4,9 +4,11 @@ import heroTab from '../../assets/images/hero-tab.jpg'
 import heroDesktop from '../../assets/images/hero-desktop.jpg'
 import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from "react-icons/fa6";
+import {  CgArrowUp } from 'react-icons/cg'
 import { Link } from 'react-router-dom';
-import React, { useRef, useState  } from 'react';
+import React, { useRef, useState, useEffect  } from 'react';
 import emailjs from '@emailjs/browser';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -34,11 +36,30 @@ const ContactUs = () => {
   };
 
 
+  const ScrollTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
     return(
         <main className="second-content">
            <Helmet>
         <title>Contact Us - Dala Air Services</title>
       </Helmet>
+
+      <ScrollTop />
+
 <section className=''>
 <div className='icon whatsapp-fixed'>
         <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
@@ -110,6 +131,13 @@ const ContactUs = () => {
   </div>
 
 </section>
+
+
+ 
+<button className="scroll-to-top" onClick={scrollToTop}>
+        <CgArrowUp />
+      </button>
+
         </main>
     )
 }

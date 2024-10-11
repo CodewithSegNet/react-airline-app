@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.scss"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +26,8 @@ import img23 from "../../assets/images/pngegg18.png";
 import img24 from "../../assets/images/pngwing.png";
 import img25 from "../../assets/images/images.jpeg";
 import img26 from "../../assets/images/pngegg17.png";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 
 
@@ -39,6 +40,19 @@ import img26 from "../../assets/images/pngegg17.png";
 import './index.scss';
 
 const FourthSection = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+
+
   const carouselData1 = [
     { src: img1, alt: "Image 1" },
     { src: img6, alt: "Image 01" },
@@ -149,12 +163,33 @@ const FourthSection = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container" ref={ref}>
       <div className="container partner-title">
-        <p className="partners">Our Partners</p>
-        <h1>
+        <motion.p
+        
+        
+        initial={{ opacity: 0, x: -50 }}
+        animate={controls}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+        }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        
+        
+        className="partners">Our Partners</motion.p>
+        <motion.h1
+        
+        initial={{ opacity: 0, x: 50 }}
+        animate={controls}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+        }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        
+        
+        >
           We Work With The <span> Best Partners </span>
-        </h1>
+        </motion.h1>
       </div>
 
       <div>
