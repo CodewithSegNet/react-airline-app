@@ -26,6 +26,7 @@ nav .navbar{
       color: #fff;
     }
   }
+  
  
 
 
@@ -33,6 +34,14 @@ nav .navbar{
     background-color: $secondary-color !important;
     box-shadow: 0 0 0 0.4px rgb(0, 0, 0, 0.5);
     opacity: .9;
+
+    button.navbar-toggler {
+      opacity: 2;
+    }
+
+    span.navbar-toggler-icon {
+      background-color: $primary-color;
+  }
     
     .nav-link {
       color: #fff !important;
@@ -102,6 +111,16 @@ width: 50%;
     width: 100%;
     cursor: pointer;
 }
+
+.collapse {
+  transition: height 0.3s ease;
+  overflow: hidden; /* Ensure content doesn't overflow during transition */
+}
+
+.collapse.show {
+  height: auto; /* When expanded */
+}
+
 
 .iata-logo{
     width: 100%;

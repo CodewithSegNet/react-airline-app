@@ -14,7 +14,7 @@ const Card = ({ slides, settings }) => {
             <img src={slide.src} alt={slide.alt} className="card-image" />
             <h3 className="card-title">{slide.title || ""}</h3>
             <button className="book-button">
-              <a className="call-btn" href="tel:+2348027373385">Book <AiFillPhone /></a>
+              <a className="call-btn" href="tel:+2348023185363">Book <AiFillPhone /></a>
             </button>
           </div>
         ))}

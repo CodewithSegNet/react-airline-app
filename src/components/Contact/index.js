@@ -18,7 +18,7 @@ const ContactUs = () => {
       </Helmet>
 <section className='sections-bottom-pad'>
 <div className='icon whatsapp-fixed'>
-        <a href="https://wa.me/+2348027373385" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className='fix-whatsapp-icon' />
         </a>
       </div>
