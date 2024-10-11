@@ -4,6 +4,8 @@ import { FaWhatsapp } from "react-icons/fa6";
 import logo from '../../assets/images/airlinelogo-removebg-preview.png';
 import { FaFacebook } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 
 
@@ -12,32 +14,81 @@ import { AiOutlineMail } from "react-icons/ai";
 
 
 const Footer = () => {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+    const controls = useAnimation();
+  
+    useEffect(() => {
+      if (isInView) {
+        controls.start("visible");
+      }
+    }, [isInView, controls]);
+  
+  
+
     return (
-        <footer className='footer'>
+        <footer className='footer' ref={ref}>
             <div className='container'>
-                <div className='iata--text'>
+                <motion.div
+                
+                initial={{ opacity: 0, y: 50 }}
+                animate={controls}
+                variants={{
+                  visible: { opacity: 1, y: 0 }, 
+                }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+
+                className='iata--text'>
                     <h3>
                         IATA, NCAA Registered Agent/ATOL, Nigerian Hajj Commission,
                         Kano State Chambers of Commerce
                     </h3>
-                </div>
+                </motion.div>
 
                 <div className='footer--title'>
                     <div className="footer--logo">
                         <Link className="logo--footer" to="/">
-                            <img className="" src={logo} alt="logo" />
+                            <motion.img
+                            
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={controls}
+                            variants={{
+                              visible: { opacity: 1, y: 0 }, 
+                            }}
+                            transition={{ duration: 0.7, delay: 0.7 }}
+                            
+                            className="" src={logo} alt="logo" />
                         </Link>
                     </div>
 
-                    <p className='footer--text text2'>
+                    <motion.p
+                    
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls}
+                    variants={{
+                      visible: { opacity: 1, y: 0 }, 
+                    }}
+                    transition={{ duration: 0.7, delay: 0.9 }}
+                    
+                    className='footer--text text2'>
                         #48, Ibrahim Taiwo Road, Kano State, Nigeria.
                         <br/>
                         Amino Kano Crescent, suit 205 GCL Plaza Plot ELOT 522.
                         Abuja Office. 
 
-                    </p>
+                    </motion.p>
 
-                    <div>
+                    <motion.div
+                    
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls}
+                    variants={{
+                      visible: { opacity: 1, y: 0 }, 
+                    }}
+                    transition={{ duration: 0.7, delay: 1.3 }}
+
+                    >
                         <p className='footer--text'>
                             +234 802 737 3385
                         </p>
@@ -49,37 +100,76 @@ const Footer = () => {
                         <p className='footer--text'>
                             dalaair@yahoo.com
                         </p>
-                    </div>
+                    </motion.div>
 
 
                 </div>
 
                 <div>
                     <div className='footer--icon'>
-                        <div className='icon'>
+                        <motion.div
+                        
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={controls}
+                        variants={{
+                          visible: { opacity: 1, y: 0 }, 
+                        }}
+                        transition={{ duration: 0.7, delay: 0.7 }}
+                        
+                        className='icon'>
                             <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">
                                 <FaFacebook className='facebook' />
                             </a>
-                        </div>
-                        <div className='icon'>
+                        </motion.div>
+                        <motion.div
+                        
+                        
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={controls}
+                        variants={{
+                          visible: { opacity: 1, y: 0 }, 
+                        }}
+                        transition={{ duration: 0.7, delay: 0.9} }
+
+                        className='icon'>
                             <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
                                 <FaWhatsapp className='whatsapp' />
                             </a>
-                        </div>
-                        <div className='icon'>
+                        </motion.div>
+                        <motion.div
+                        
+                        
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={controls}
+                        variants={{
+                          visible: { opacity: 1, y: 0 }, 
+                        }}
+                        transition={{ duration: 0.7, delay: 1.3 }}
+                        
+                        className='icon'>
                             <a href="mailto:dalaair@yahoo.com">
                                 <AiOutlineMail className='mail' />
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
 
                 </div>
 
                 <hr className='line' />
 
-                <span className='copyright'>
+                <motion.span 
+                
+                
+                initial={{ opacity: 0, y: 50 }}
+                animate={controls}
+                variants={{
+                  visible: { opacity: 1, y: 0 }, 
+                }}
+                transition={{ duration: 0.7, delay: 1.4 }}
+                
+                className='copyright'>
                     Copyright © All Right Reserved
-                </span>
+                </motion.span>
 
 
 

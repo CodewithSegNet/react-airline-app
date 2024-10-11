@@ -1,4 +1,3 @@
-import React from "react";
 import './index.scss';
 import Card from "../card/index.js";
 import img1 from "../../assets/images/sam-riz.jpg";
@@ -10,7 +9,8 @@ import img6 from "../../assets/images/elimende-inagella-iDwpJIo6aq0-unsplash.jpg
 import img7 from "../../assets/images/umair-dingmar-m9n8W46ZEXc-unsplash.jpg";
 import img8 from "../../assets/images/nicole-geri-gMJ3tFOLvnA-unsplash.jpg";
 import img9 from "../../assets/images/alexander-schimmeck-DSOohFTAfno-unsplash.jpg";
-
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 
 
@@ -28,6 +28,18 @@ const CardData = [
 ];
 
 const SecondSection = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -73,15 +85,24 @@ const SecondSection = () => {
   };
 
   return (
-    <section className="container bottom--padding">
-      <div className="second--content">
+    <section className="container bottom--padding" ref={ref}>
+      <motion.div
+      
+      initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+        variants={{
+          visible: { opacity: 1, y: 0 }, 
+        }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+
+      className="second--content">
         <h1>
           Explore Our <span>Exclusive Travel     </span>   <br className="break"/>    Packages
         </h1>
         <div className="card-carousel">
           <Card slides={CardData} settings={settings} />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
