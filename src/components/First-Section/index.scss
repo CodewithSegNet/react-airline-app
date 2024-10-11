@@ -193,6 +193,32 @@ span {
 
 
 
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 1000;
+  height: 3rem;
+  width: 48px;
+  background-color: $secondary-color;
+  color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+
 // Extra Devices / extra screen (max-width: 1200px)
 @media (max-width: 1290px) {
 
@@ -311,6 +337,16 @@ span {
     z-index: 1000;
   }
 
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    z-index: 1000;
+    height: 3rem;
+    width: 48px;
+  }
+
 }
 
 // Medium Devices / Tablets (max-width: 767px)
@@ -391,6 +427,16 @@ span {
     bottom: 10px;
     right: 10px;
     z-index: 1000;
+  }
+
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    z-index: 1000;
+    height: 3rem;
+    width: 48px;
   }
 
 }
@@ -478,6 +524,15 @@ span {
     z-index: 1000;
   }
 
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 67px;
+    right: 17px;
+    z-index: 1000;
+    height: 3rem;
+    width: 48px;
+  }
   
 
   .carousel-item img {
@@ -542,6 +597,16 @@ span {
     bottom: 10px;
     right: 10px;
     z-index: 1000;
+  }
+
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 65px;
+    right: 10px;
+    z-index: 1000;
+    height: 3rem;
+    width: 48px;
   }
 
 

@@ -3,21 +3,56 @@ import heroMobile from '../../assets/images/hero-mobile.jpg'
 import heroTab from '../../assets/images/hero-tab.jpg'
 import heroDesktop from '../../assets/images/hero-desktop.jpg'
 import aboutUs from '../../assets/images/aboutUs.jpeg'
+import aboutUs4 from '../../assets/images/aboutUs3.jpeg'
 import aboutUs2 from '../../assets/images/aboutUs2.jpeg'
 import aboutUs3 from '../../assets/images/ceo.jpeg'
 import { Helmet } from 'react-helmet-async';
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import {  CgArrowUp } from 'react-icons/cg'
+import React, { useEffect, useRef } from "react"
+import { motion, useInView, useAnimation } from "framer-motion"
+import { useLocation } from 'react-router-dom';
 
 
 
 
 const AboutUs = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+  
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
+  
+
+  const ScrollTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <main className="second-content">
       <Helmet>
         <title>About Us - Dala Air Services</title>
       </Helmet>
+      <ScrollTop />
       <section className='sections-bottom-pad'>
         <div className='icon whatsapp-fixed'>
           <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
@@ -51,7 +86,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" ref={ref}>
 
         <div>
           <div className="container">
@@ -84,17 +119,38 @@ const AboutUs = () => {
 
 
 
-              <div className="about--img">
+              <motion.div
+              
+              
+              variants={{
+                hidden: { opacity: 0, y: 45 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.3}}
+              
+              className="about--img">
                 <img src={aboutUs} className="about-img-block" alt="our history" />
-              </div>
+              </motion.div>
             </div>
 
 
             <div className="about--content about--gap">
 
-              <div className="about--img">
+              <motion.div
+              
+              variants={{
+                hidden: { opacity: 0, y: 45 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.3}}
+              
+              className="about--img">
                 <img src={aboutUs2} className="about-img-block" alt="our history" />
-              </div>
+              </motion.div>
 
               <div className="about-text">
                 <h1 className="second-header">
@@ -169,9 +225,19 @@ Needs, And We Look Forward To The Opportunity To Serve You.
               </div>
 
 
-              <div className="about--img about-sec-img">
-                <img src={aboutUs2} className="about-img-block" alt="our history" />
-              </div>
+              <motion.div 
+              
+              variants={{
+                hidden: { opacity: 0, y: 45 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.3}}
+              
+              className="about--img about-sec-img">
+                <img src={aboutUs4} className="about-img-block" alt="our history" />
+              </motion.div>
 
             </div>
 
@@ -180,9 +246,20 @@ Needs, And We Look Forward To The Opportunity To Serve You.
 
             <div className="about--content about--gap">
 
-              <div className="about--img about-sec-img">
+              <motion.div
+              
+
+              variants={{
+                hidden: { opacity: 0, y: 45 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: 0.3}}
+
+              className="about--img about-sec-img">
                 <img src={aboutUs3} className="about-img-block" alt="our history" />
-              </div>
+              </motion.div>
 
               <div className="about-text">
                 <h1 className="second-header">
@@ -208,6 +285,10 @@ Needs, And We Look Forward To The Opportunity To Serve You.
         </div>
 
       </section>
+
+      <button className="scroll-to-top" onClick={scrollToTop}>
+        <CgArrowUp />
+      </button>
 
     </main>
   )

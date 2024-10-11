@@ -7,7 +7,7 @@ import saudi from '../../assets/images/saudi_logo.avif'
 import trophy from '../../assets/images/trophy.png'
 import trophy1 from '../../assets/images/trophy1.png'
 import { FaWhatsapp } from "react-icons/fa6";
-import { CgArrowRight } from 'react-icons/cg'
+import { CgArrowRight, CgArrowUp } from 'react-icons/cg'
 import React, { useEffect, useRef } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 
@@ -21,10 +21,13 @@ const Section = () => {
   
   useEffect(() => {
     if (isInView) {
-      console.log("Element is in view!");
       mainControls.start("visible");
     }
   }, [isInView, mainControls]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <main  ref={ref} className="first-content" alt='hero content'>
@@ -65,7 +68,7 @@ const Section = () => {
                 <motion.p 
                 
                 variants={{
-                  hidden: { opacity: 0, y: -75 },
+                  hidden: { opacity: 0, y: -45 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 initial="hidden"
@@ -158,7 +161,9 @@ const Section = () => {
       </div>
       </section>
      
-
+      <button className="scroll-to-top" onClick={scrollToTop}>
+        <CgArrowUp />
+      </button>
      
     </main>
   )

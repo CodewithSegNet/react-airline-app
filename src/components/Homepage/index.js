@@ -7,6 +7,11 @@ import React, { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import './index.scss';
 
+
+
+
+
+
 const Home = () => {
 
   const ref = useRef(null);
@@ -18,7 +23,6 @@ const Home = () => {
       controls.start("visible");
     }
   }, [isInView, controls]);
-
 
 
   return (

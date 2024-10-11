@@ -1,11 +1,10 @@
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
-import React, { useState, useEffect,  useRef  } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/images/airlinelogo-removebg-preview.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import IATAlogo from '../../assets/images/IATA-Accredited-Agent-white-900.webp';
-import { motion, useInView, useAnimation } from "framer-motion"
 
 
 
@@ -24,19 +23,6 @@ const Navbar = () => {
       setScrolled(false);
     }
   };
-
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const mainControls = useAnimation();
-  
-  useEffect(() => {
-    if (isInView) {
-      console.log("Element is in view!");
-      mainControls.start("visible");
-    }
-  }, [isInView, mainControls]);
 
 
   // const toggleNavbar = () => {
@@ -77,15 +63,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header ref={ref}>
-      <motion.nav
-         variants={{
-          hidden: { opacity: 0, y: -75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.7}}
+    <header>
+      <nav
         className={`navbar navbar-expand-lg fixed-top ${
           scrolled ? 'navbar-scrolled' : ''
         } ${isNavbarOpen ? 'navbar-open' : ''}`}
@@ -179,7 +158,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </nav>
     </header>
   );
 };
