@@ -37,11 +37,9 @@ nav .navbar{
 
     button.navbar-toggler {
       opacity: 2;
+      z-index: 9999999999999;
+      position: relative;
     }
-
-    span.navbar-toggler-icon {
-      background-color: $primary-color;
-  }
     
     .nav-link {
       color: #fff !important;

@@ -8,12 +8,26 @@ import trophy from '../../assets/images/trophy.png'
 import trophy1 from '../../assets/images/trophy1.png'
 import { FaWhatsapp } from "react-icons/fa6";
 import { CgArrowRight } from 'react-icons/cg'
+import React, { useEffect, useRef } from "react"
+import { motion, useInView, useAnimation } from "framer-motion"
 
 
 
 const Section = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+  
+  useEffect(() => {
+    if (isInView) {
+      console.log("Element is in view!");
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
   return (
-    <main className="first-content" alt='hero content'>
+    <main  ref={ref} className="first-content" alt='hero content'>
       <section aria-label="Hero Section">
       <div className='icon whatsapp-fixed'>
         <a href="https://wa.me/+2348023185363" target="_blank" rel="noopener noreferrer">
@@ -37,16 +51,43 @@ const Section = () => {
             />
             <div className="container page-container">
               <div className="carousel-caption">
-                <h1 className='hero--text'>
+                <motion.h1 
+                 variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.7}}
+                className='hero--text'>
                   Turn your adventure dreams into reality with <span>Dala Air</span>
-                </h1>
-                <p className='hero--parag'>
+                </motion.h1>
+                <motion.p 
+                
+                variants={{
+                  hidden: { opacity: 0, y: -75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.7, delay: 0.4}}
+
+                className='hero--parag'>
                   Let us take you on unforgettable journeys to explore the
                   world’s most exciting destinations
-                </p>
-                <button type="button" className='button'>
+                </motion.p>
+                <motion.button 
+                variants={{
+                  hidden: { opacity: 0, y: 75 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.7, delay: 0.6}}
+                
+                type="button" className='button'>
                   <a className='btn' href="tel:+2348023185363">Book Now <CgArrowRight /></a>
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>
@@ -60,28 +101,58 @@ const Section = () => {
 
       <div className="award-logo">
         <div className='container award--logo-container'>
-          <div className="awards">
+          <motion.div 
+          
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.7, delay: 0.7}}
+          
+          className="awards">
             <img src={trophy1}
               alt='Presidency National Hajj Commission of Nigeria Award'
               loading="lazy"
             />
             <span>Presidency National Hajj Commission of Nigeria</span>
-          </div>
+          </motion.div>
 
-          <div className="second-award">
+          <motion.div 
+          
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.7, delay: 0.8}}
+          
+          className="second-award">
             <img src={saudi}
               alt='2 Times Saudi Agent Award Logo' loading="lazy"
             />
             <span>2 Times Saudi Agent Award</span>
-          </div>
+          </motion.div>
 
-          <div className="awards">
+          <motion.div
+          
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.7, delay: 0.9}}
+
+          className="awards">
             <img src={trophy}
               alt='Best Performing Agent in Nigeria, 2009'
               loading="lazy"
             />
             <span>Best performing Agent in Nigeria, 2009.</span>
-          </div>
+          </motion.div>
         </div>
 
       </div>
