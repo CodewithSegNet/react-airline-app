@@ -231,7 +231,7 @@ span {
 @media (max-width: 1290px) {
 
   .page-container .carousel-caption {
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -314,6 +314,7 @@ span {
 
   .page-container .carousel-caption {
     width: 70%;
+    top: 50%;
   }
 
 
@@ -361,6 +362,7 @@ span {
 @media (max-width: 769px) {
   .page-container .carousel-caption {
     width: 77%;
+    top: 50%;
   }
 
   
@@ -470,6 +472,8 @@ span {
 
   .page-container .carousel-caption {
     width: 90%;
+    top: 50%;
+
   }
 
   .container .hero--parag {
@@ -582,6 +586,7 @@ span {
 
   .page-container .carousel-caption {
     width: 90%;
+    top: 50%;
   }
 
 
