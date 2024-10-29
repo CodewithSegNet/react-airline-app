@@ -4,6 +4,7 @@ import Footer from '../Footer/index.js';
 import Book from '../book/index.js';
 import './index.scss';
 
+
 const Layout = () => {
   return (
     <>
