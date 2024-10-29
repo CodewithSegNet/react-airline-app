@@ -18,7 +18,7 @@ main.first-content {
 .whatsapp-fixed {
   position: fixed;
   bottom: 20px;
-  right: 40px;
+  right: 10px;
   z-index: 1000;
 }
 
@@ -97,7 +97,7 @@ main.first-content {
 }
 
 .container .btn {
-  padding: .9rem 2.3rem !important;
+  padding: .9rem 2rem !important;
   border: 1px solid $primary-color !important;
   font-family: EB_Garamond, sans-serif;
   border-radius: .3rem;
@@ -127,8 +127,9 @@ main.first-content {
 .container .btn:hover {
   background-color: $primary-color !important;
   color: #fff !important;
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
+
 
 
 
@@ -154,6 +155,10 @@ span {
   span {
     color: $primary-color !important;
   }
+}
+
+.second-award{
+  width: 30%;
 }
 
 .award-logo {
@@ -197,7 +202,7 @@ span {
 .scroll-to-top {
   position: fixed;
   bottom: 80px;
-  right: 40px;
+  right: 10px;
   z-index: 1000;
   height: 3rem;
   width: 48px;
@@ -215,6 +220,9 @@ span {
   }
 }
 
+.second-award span{
+  color: $primary-color;
+}
 
 
 
@@ -287,7 +295,7 @@ span {
   }
   
   .award--logo-container {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 
@@ -362,7 +370,7 @@ span {
 
 
 .award--logo-container {
-  flex-direction: column;
+  flex-direction: row;
 }
 
   .container .hero--text {
@@ -399,13 +407,22 @@ span {
   }
 
   .awards {
-    width: 100%;
+    width: 30%;
     text-align: center;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
     padding: 1.5rem 0;
+
+    span{
+      font-size: 12px;
+    }
+  }
+
+  .second-award span{
+    font-size: 12px;
+    color: $primary-color;
   }
 
 
@@ -465,8 +482,23 @@ span {
   }
 
 
+  .awards img {
+    width: 64px;
+    height: auto;
+    margin: 0 auto;
+}
+
+  .second-award img {
+    width: 75px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
 .award--logo-container {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 
@@ -494,11 +526,11 @@ span {
   }
 
   .awards {
-    width: 100%;
+    width: 35%;
     text-align: center;
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: grid;
     flex-direction: column;
     padding: 1.5rem 0;
   }
@@ -520,7 +552,7 @@ span {
   .whatsapp-fixed {
     position: fixed;
     bottom: 15px;
-    right: 15px;
+    right: 10px;
     z-index: 1000;
   }
 
@@ -528,7 +560,7 @@ span {
   .scroll-to-top {
     position: fixed;
     bottom: 67px;
-    right: 17px;
+    right: 10px;
     z-index: 1000;
     height: 3rem;
     width: 48px;
@@ -553,8 +585,22 @@ span {
   }
 
 
+  .awards img {
+    width: 56px;
+    height: auto;
+    margin: 0 auto;
+}
+
+  .second-award img {
+    width: 76px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
   .award--logo-container {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 

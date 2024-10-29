@@ -209,7 +209,7 @@ Needs, And We Look Forward To The Opportunity To Serve You.
 
               <div className="about-text">
                 <h1 className="about-first-header">
-                  Chairman <span> Message</span>
+                  Chairman <br/>  <span> Message</span>
                 </h1>
 
                 <p className="align">
@@ -263,7 +263,7 @@ Needs, And We Look Forward To The Opportunity To Serve You.
 
               <div className="about-text">
                 <h1 className="second-header">
-                  CEO <span> Message </span>
+                  CEO <br/> <span> Message </span>
                 </h1>
 
                 <p className="align">

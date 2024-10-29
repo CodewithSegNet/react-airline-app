@@ -104,23 +104,7 @@ const Section = () => {
 
       <div className="award-logo">
         <div className='container award--logo-container'>
-          <motion.div 
-          
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-          transition={{ duration: 0.7, delay: 0.7}}
-          
-          className="awards">
-            <img src={trophy1}
-              alt='Presidency National Hajj Commission of Nigeria Award'
-              loading="lazy"
-            />
-            <span>Presidency National Hajj Commission of Nigeria</span>
-          </motion.div>
+    
 
           <motion.div 
           
@@ -137,6 +121,25 @@ const Section = () => {
               alt='2 Times Saudi Agent Award Logo' loading="lazy"
             />
             <span>2 Times Saudi Agent Award</span>
+          </motion.div>
+
+
+          <motion.div 
+          
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.7, delay: 0.7}}
+          
+          className="awards">
+            <img src={trophy1}
+              alt='Presidency National Hajj Commission of Nigeria Award'
+              loading="lazy"
+            />
+            <span>Presidency National Hajj Commission of Nigeria</span>
           </motion.div>
 
           <motion.div
